@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+            node-version: '14'
+      - name: run
+        run: |
+          npm -g install honkit gitbook-plugin-expand-active-chapter gitbook-plugin-collapsible-chapters  gitbook-plugin-prism  gitbook-plugin-copy-code-button gitbook-plugin-hide-published-with  gitbook-plugin-anchors  gitbook-plugin-intopic-toc  gitbook-plugin-back-to-top-button  gitbook-plugin-hints gitbook-plugin-git-author  --save-dev
+      - name: Build
+        run: |
+          honkit build . docs
+      - name: Push to build branch
+        uses: s0/git-publish-subdir-action@master
+        env:
+         REPO: self
+         BRANCH: docs
+         FOLDER: docs
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
