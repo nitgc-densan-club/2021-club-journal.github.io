@@ -24,10 +24,16 @@
 https://github.com/nitgc-densan-club/2021-club-journal.github.io.git
 ```
 **Clone**してください。
-5. クローンしてきたら、ブランチを切ります。
-**2021-club-journal.github.io**->**Repository**->**Branch**でブランチの名前を変更してください。なお変更しないと、デフォルトではmainブランチで作業することになり、pushが拒否されるかと思います。
-![Change branch name](./static/workingcopy_share.png)
-
+5. クローンしてきたら、ブランチを切ります。<br>
+**ブランチを切らないとRejectされますので注意です!**
+**2021-club-journal.github.io**->**Repository**->**Branch**の順でタップしてください。<br>
+![Change branch name](./static/change1_branch.png)
+6. タップしたら、ブランチ一覧が表示されます。そこの右上のブランチアイコンをタップしてください。<br>
+![tap branch icon](./static/change2_branch_icon.png)
+7. ブランチの名前を付けることができます。ルールに従ってブランチ名をつけてください。<br>
+![branch name config](./static/change3_branch_name.png)
+8. これでブランチが新規作成されました!<br>
+![done make branch](./static/change4_branch_current.png)
 ## OBSIDIANのセットアップ
 1. Obsidianを開き、**Create new vault**をタップしてください。<br>
 ![init obisian](./static/OBSIDIAN_init.png)
