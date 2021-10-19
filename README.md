@@ -4,15 +4,15 @@
 nodejsとnpmをお使いの環境でインストールし、下記のコマンドで、yarnをインストールしてください。
 
 ```shell
-    npm -g yarn
+npm -g yarn
 ```
 ## 実行方法
 実行方法はディレクトリに移動して、
 ```shell
-	yarn install
+yarn install
 ```
 ```shell
-	yarn honkit serve
+yarn honkit serve
 ```
 すると、標準では、4000ポートでlocalhostにサーバーが立ち上がります。
 
