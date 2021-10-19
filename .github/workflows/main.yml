@@ -14,10 +14,17 @@ jobs:
             node-version: '14'
       - name: run
         run: |
-          npm -g install honkit gitbook-plugin-expand-active-chapter gitbook-plugin-collapsible-chapters  gitbook-plugin-prism  gitbook-plugin-copy-code-button gitbook-plugin-hide-published-with  gitbook-plugin-anchors  gitbook-plugin-intopic-toc  gitbook-plugin-back-to-top-button  gitbook-plugin-hints gitbook-plugin-git-author  --save-dev
+          npm -g install yarn
+      - name: cache node_modules
+      id: node_modules_cache_id
+      uses: actions/cache@v2
+      with:
+        path: |
+          node_modules
+        key: node-v${{ matrix.node-version }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
       - name: Build
         run: |
-          honkit build . docs
+          yarn honkit build . docs
       - name: Push to build branch
         uses: s0/git-publish-subdir-action@master
         env:
