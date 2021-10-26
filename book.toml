@@ -1,0 +1,20 @@
+[book]
+title = "群馬工業高等専門学校 電算部"
+description = "電算部のリポジトリです。"
+authors = ["densan"]
+language = "ja"
+multilingual = false
+src = "src"
+[build]
+build-dir = "docs"
+create-missing = false
+[output.html]
+mathjax-support = true
+preferred-dark-theme = "navy"
+
+[output.html.playground]
+editable = true
+copy-js = true
+line-numbers = true
+[output.html.print]
+enable = true
