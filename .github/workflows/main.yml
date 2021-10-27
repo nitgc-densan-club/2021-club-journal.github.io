@@ -44,7 +44,7 @@ jobs:
       - name: Install dependent module
         run: npm install
       
-      - name: Execute textlint for ブログ記事
+      - name: Execute textlint for 
         run: |
           npx textlint -f checkstyle "src/contents/*.md" >> .textlint.log
 
