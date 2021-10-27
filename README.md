@@ -1,41 +1,34 @@
+{{#title 電算部}}
 # ここについて
-このリポジトリは電算部の部誌のリポジトリです
-## セットアップ方法
-nodejsとnpmをお使いの環境でインストールし、下記のコマンドで、yarnをインストールしてください。
-
+このリポジトリは電算部のリポジトリです
+# セットアップ方法
+1. [Rust](https://www.rust-lang.org/ja/tools/install)からインストーラーをダウンロードします。
+2. インストーラーを実行すると、標準ではパスが通ります。
+3. コマンドプロンプトからmdbookをインストールします。
 ```shell
-npm -g yarn
+cargo install mdbook
 ```
-## 実行方法
-実行方法はディレクトリに移動して、
+
+4. リポジトリのルートディレクトリで、mdbookを起動します。
 ```shell
-yarn install
+mdbook serve
 ```
-```shell
-yarn honkit serve
+
+5. 標準だと、
+```url
+http://localhost:3000
 ```
-すると、標準では、4000ポートでlocalhostにサーバーが立ち上がります。
+で立ち上がります。
 
-## 使用しているソフトウェア
-- [Node.js](https://nodejs.org/ja/)はJavascriptの実行環境です。<br>
-- [npm](https://www.npmjs.com/)はNode.jsのパッケージマネージャーです。<br>
-- [yarn](https://yarnpkg.com/)はNode.jsのパッケージマネージャーです。<br>
-- [honkit](https://github.com/honkit/honkit)はマークダウン記法のドキュメント作成ツールです。
-
-## 使用したプラグイン
-- [gitbook-plugin-expand-active-chapter](https://www.npmjs.com/package/gitbook-plugin-expand-active-chapter)
-- [gitbook-plugin-collapsible-chapters](https://www.npmjs.com/package/gitbook-plugin-collapsible-chapters)
-- [gitbook-plugin-prism](https://www.npmjs.com/package/gitbook-plugin-prism)
-- [gitbook-plugin-copy-code-button](https://www.npmjs.com/package/gitbook-plugin-copy-code-button)
-- [gitbook-plugin-hide-published-with](https://www.npmjs.com/package/gitbook-plugin-hide-published-with)
-- [gitbook-plugin-anchors](https://www.npmjs.com/package/gitbook-plugin-anchors)
-- [gitbook-plugin-intopic-toc](https://www.npmjs.com/package/gitbook-plugin-intopic-toc)
-- [gitbook-plugin-back-to-top-button](https://www.npmjs.com/package/gitbook-plugin-back-to-top-button)
-- [gitbook-plugin-git-author](https://www.npmjs.com/package/gitbook-plugin-back-to-top-button)
-
-## 参考にしたサイト
-Github Actionsを書くときに参考にしたサイトです
-- odanさんの[GitHub Actions で yarn install を爆速にしたい](https://zenn.dev/odan/scraps/81b2738864a908)
-**node_modules 自体をキャッシュしてみる**を参考にしました。
-- qualitia_cdevさんの[GitHub Actions の Workflow を高速化する](https://qiita.com/qualitia_cdev/items/407b0df9c0a0f0f45bbc)
-**モジュールのインストールを高速化する**を参考にしました。
+# 使用したものについて
+- [mdBook](https://github.com/rust-lang/mdBook)はrustで作られた文章管理ツールです。
+- peaceiris様が作られた、[actions-mdbook](https://github.com/peaceiris/actions-mdbook)を使用しています。
+# 書き方
+Rustは実行できます。
+```rust:editable
+fn main() {
+    println!("Hello, 電算部!");
+}
+```
+MathJaxの数式も書けます。
+\\[\int \int f(x,y) dx dy \\]

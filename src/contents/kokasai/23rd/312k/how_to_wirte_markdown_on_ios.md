@@ -17,16 +17,17 @@
 ![student working copy](./static/Working_copy_student.png)
 2. アプリが自動で開かれるので、Githubのアカウントでサインインしてください。<br>
 ![sign in github](./static/Working_copy_login.png)
-3. サインインしたら、クローンします。右上の**+**ボタンをタップして、**Clone repository**をタップします。<br>
+3. サインインしたら、クローンします。右上の **+** ボタンをタップして、**Clone repository**をタップします。<br>
 ![clone](./static/Working_Copy_select.png)
-4. すると、クローンするリポジトリが表示されるので以下のURLを入力して、
-```URL
+4. すると、クローンするリポジトリが表示されるので、ここでは例として、電算部のリポジトリを指定しています。入力したら、
+``` URL
 https://github.com/nitgc-densan-club/2021-club-journal.github.io.git
 ```
 **Clone**してください。
+
 5. クローンしてきたら、ブランチを切ります。<br>
-**ブランチを切らないとRejectされますので注意です!**
-**2021-club-journal.github.io**->**Repository**->**Branch**の順でタップしてください。<br>
+**権限がない場合ブランチを切らないとRejectされますので注意です!**
+**リポジトリ名**->**Repository**->**Branch**の順でタップしてください。<br>
 ![Change branch name](./static/change1_branch.png)
 6. タップしたら、ブランチ一覧が表示されます。そこの右上のブランチアイコンをタップしてください。<br>
 ![tap branch icon](./static/change2_branch_icon.png)

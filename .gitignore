@@ -1,6 +1,2 @@
-_book
-
-/.obsidian.mobile/*
-/.obsidian/*
-docs/
-node_modules/
+book
+docs
