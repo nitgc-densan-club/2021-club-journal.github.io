@@ -8,7 +8,7 @@
 		* [312k]()
 			* [スマホでマークダウンを書く方法](./contents/kokasai/23rd/312k/how_to_wirte_markdown_on_ios.md)
 			* [ラズパイでLチカ!!](./contents/kokasai/23rd/312k/LED.md)
-    * [namacha]()
+    	* [namacha]()
 			* [GitHubProfileの勧め](./contents/kokasai/23rd/namacha/GitHubProfile.md)
 * [IT勉強会]()
 	* [IT勉強会6th](./contents/session/6th/link.md)
