@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> README</a></li><li class="chapter-item expanded "><a href="contents/about.html"><strong aria-hidden="true">2.</strong> About</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 工華祭</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="contents/kokasai/22th/link.html"><strong aria-hidden="true">3.1.</strong> 第22回工華祭</a></li><li class="chapter-item expanded "><a href="contents/kokasai/23rd/frontpage.html"><strong aria-hidden="true">3.2.</strong> 第23回工華祭</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.1.</strong> 312k</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="contents/kokasai/23rd/312k/how_to_wirte_markdown_on_ios.html"><strong aria-hidden="true">3.2.1.1.</strong> スマホでマークダウンを書く方法</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.2.</strong> namacha</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="contents/kokasai/23rd/namacha/GitHubProfile.html"><strong aria-hidden="true">3.2.2.1.</strong> GitHubProfileの勧め</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> IT勉強会</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="contents/session/6th/link.html"><strong aria-hidden="true">4.1.</strong> IT勉強会6th</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> README</a></li><li class="chapter-item expanded "><a href="contents/about.html"><strong aria-hidden="true">2.</strong> About</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 工華祭</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="contents/kokasai/22th/link.html"><strong aria-hidden="true">3.1.</strong> 第22回工華祭</a></li><li class="chapter-item expanded "><a href="contents/kokasai/23rd/frontpage.html"><strong aria-hidden="true">3.2.</strong> 第23回工華祭</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.1.</strong> 312k</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="contents/kokasai/23rd/312k/how_to_wirte_markdown_on_ios.html"><strong aria-hidden="true">3.2.1.1.</strong> スマホでマークダウンを書く方法</a></li><li class="chapter-item expanded "><a href="contents/kokasai/23rd/312k/LED.html"><strong aria-hidden="true">3.2.1.2.</strong> ラズパイでLチカ!!</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.2.</strong> namacha</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="contents/kokasai/23rd/namacha/GitHubProfile.html"><strong aria-hidden="true">3.2.2.1.</strong> GitHubProfileの勧め</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> IT勉強会</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="contents/session/6th/link.html"><strong aria-hidden="true">4.1.</strong> IT勉強会6th</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -263,6 +263,163 @@
 <h1 id="おわりに"><a class="header" href="#おわりに">おわりに</a></h1>
 <p>以上で編集できるようになりました。
 Obsidianは非常に便利な編集アプリですので是非使ってみてください。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="はじめに-1"><a class="header" href="#はじめに-1">はじめに</a></h1>
+<p>あなたはラズパイを買って何をしますか?<br>
+そうですLチカです!!<br>
+今回はそのLチカについて解説します。</p>
+<h2 id="方法"><a class="header" href="#方法">方法</a></h2>
+<h3 id="接続方法"><a class="header" href="#接続方法">接続方法</a></h3>
+<h4 id="使用したもの"><a class="header" href="#使用したもの">使用したもの</a></h4>
+<p>今回使用したものです。</p>
+<ul>
+<li><a href="https://www.raspberrypi.org/">Raspberry pi</a></li>
+<li><a href="https://www.raspberrypi.com/software/operating-systems/">Raspbian</a></li>
+<li>330Ω抵抗</li>
+<li>LED</li>
+<li><a href="https://nano-editor.org/">nano</a></li>
+<li><a href="https://www.vim.org/">vim</a></li>
+<li>WiringPi</li>
+<li><a href="https://gcc.gnu.org/">gcc</a></li>
+<li><a href="https://www.python.org/">python</a></li>
+</ul>
+<h4 id="使用したものの写真"><a class="header" href="#使用したものの写真">使用したものの写真</a></h4>
+<p>では再び、必要なものを確認しましょう。
+まずは抵抗です。330Ωのものを用意しましょう。</p>
+<p><img src="contents/kokasai/23rd/312k/./LED_static/1resistance.png" alt="diode" /></p>
+<p>次に、LEDです。<br>今回は赤色を使いました。LEDは色によって仕様が違うので、よく確認してください。
+<img src="contents/kokasai/23rd/312k/./LED_static/2led.png" alt="LED" /></p>
+<p>そして、ブレッドボードです。<br>今回使うものは、はんだ付けしなくてよいので、電子工作体験にはうってつけかと思います。<br>これからブレッドボードの<strong>アルファベットが縦に書かれている穴を列、数字が横に書かれているものを行と呼ぶ</strong>ことにします。</p>
+<p><img src="contents/kokasai/23rd/312k/./LED_static/3bread_board.png" alt="ブレッドボード" /></p>
+<h4 id="ブレッドボードの説明"><a class="header" href="#ブレッドボードの説明">ブレッドボードの説明</a></h4>
+<p>ブレッドボードは、前述のとおり、電子工作にはよく使われます。ブレッドボードには様々な種類がありますが、今回使用したものは<strong>差し込み式</strong>と呼ばれるものです。その名の通り、ジャンパワイヤをさしたり、LEDや抵抗を直接挿せます。<br>
+<strong>ブレッドボードは行で回路が導通して、列では導通していません。</strong></p>
+<h4 id="ブレッドボードへ接続"><a class="header" href="#ブレッドボードへ接続">ブレッドボードへ接続</a></h4>
+<p>さて、ブレッドボードへ接続しましょう!<br>
+今回作成する回路は、抵抗とLEDを接続した回路を作ります。<br>
+その前に、回路に電流が流れる流れを説明します。<br>
+回路は、プラス極からマイナス極へと電流が流れます。今回はそのことに留意して作ります。<br>なぜならば、<strong>今回の回路は極性を間違えると、LEDが壊れるからです...</strong>
+それでは接続しましょう!
+写真のように接続してください。</p>
+<p><img src="contents/kokasai/23rd/312k/./LED_static/4breadboard_LED.png" alt="LEDと抵抗" /></p>
+<p>ここで、再び注意です。LEDには極性があります。<strong>足の長いほうがプラスなので、抵抗側にあるかどうかを確認してください。</strong><br>
+接続出来たら、ジャンパワイヤでラズベリーパイと、LEDを接続します。<br>
+ジャンパワイヤのプラス極を抵抗の行に、ジャンパワイヤのマイナス極をLED側にそれぞれ接続してください。</p>
+<p><img src="contents/kokasai/23rd/312k/./LED_static/5plugin_bread_board.png" alt="ジャンパワイヤとLEDと抵抗" /></p>
+<p>上から見るとこんな感じです。</p>
+<p><img src="contents/kokasai/23rd/312k/./LED_static/6seefromtop.png" alt="上から見た写真" /></p>
+<p><img src="contents/kokasai/23rd/312k/./LED_static/7connectcheck.png" alt="上から見たもの" /></p>
+<p>するとラズパイを電源を入れていて、正しく接続されていると、LEDが点灯するかと思います。ここで光らなかったら、もう一度やり直してください。<br>
+<strong>ジャンパワイヤや抵抗、LEDは奥まで挿す必要があります。</strong>
+正しく挿すとこんな感じですが、
+<img src="contents/kokasai/23rd/312k/./LED_static/8correctplug.png" alt="正しく刺さったもの" /></p>
+<p>正しく挿さってないと、こんな感じです。</p>
+<p><img src="contents/kokasai/23rd/312k/./LED_static/9wrongplug.png" alt="間違って刺さってないもの" /></p>
+<p>以上の手順でLEDがとりあえず光ります!!</p>
+<h3 id="プログラミングlピカ"><a class="header" href="#プログラミングlピカ">プログラミングLピカ!</a></h3>
+<p>今回のガイドでは、C言語とPythonを用いた実行方法をご紹介します。</p>
+<h4 id="python"><a class="header" href="#python">Python</a></h4>
+<p>ターミナル上で、</p>
+<pre><code class="language-shell">nano main.py
+</code></pre>
+<p>と入力すると、nanoが立ち上がります。<br>
+nanoの使い方は下のほうに出てきますが簡単に説明します。<br>
+nanoは初心者向けのCUIエディタ言われて、vimより簡単だといわれています。<br>
+一番のメリットは下のほうにキーボードのショートカットが表示されていることです。<br>
+とは言いつつも、やはり難しいものです。簡単に下のほうに出てるものの紹介です。<br>
+<strong>^<strong>キーは、Ctrlキーを意味しています。例えば</strong>^C</strong>と書いてあるものを実行したかったら、Ctrlキーを押しながらCキーを押すという意味です。<br>
+ということでソースコードを入力しましょう!</p>
+<pre><code class="language-python"># GPIOを扱うためモジュールをインポートする
+import RPi.GPIO as GPIO
+# 時間を扱うためモジュールをインポートする
+import time
+# GPIOに対応するピン番号
+PNO = 3
+# ピン番号の指定
+# BOARDとすることで、ラズパイ間で共通にコードが使える
+GPIO.setmode(GPIO.BOARD)
+# GPIOのピン番号(ここでは3番ピン)を出力に設定する
+GPIO.setup(PNO, GPIO.OUT)
+# print⽂は、標準出力(ターミナルの画面上)に文字を表示する命令
+# 何回LEDを点灯するか質問している
+print(&quot;How many times?&quot;)
+# 変数へキーボードから入力された値を代入している
+# 変数は、値を保存する箱のようなもの
+loopn = input()
+# どれぐらいの間隔でLEDのオンとオフをするか聞いている
+print(&quot;How long sleep?&quot;)
+stop = input()
+# 0~⼊⼒された数未満まで繰り返す
+# iはカウンタ用の変数で、loopn回だけ繰り返す
+for i in range(loopn):
+    # HighでLEDを光らせる
+    GPIO.output(PNO, GPIO.HIGH)
+    # その状態を保持する
+    time.sleep(stop)
+    # LowでLEDを消す
+    GPIO.output(PNO, GPIO.LOW)
+    time.sleep(stop)
+# これは、GPIOをほかのプログラムからでも使えるようにするための終了処理
+# これがないとLEDがオフのままになる
+GPIO.cleanup()
+</code></pre>
+<p>上記のソースを実行するにはターミナル上で、</p>
+<pre><code class="language-shell">python main.py
+</code></pre>
+<p>と入力すると、指定した回数、間隔で動作します!</p>
+<h4 id="c言語"><a class="header" href="#c言語">C言語</a></h4>
+<p>ターミナル上で、</p>
+<pre><code class="language-shell">nano main.c
+</code></pre>
+<p>と入力すると、nanoが立ち上がるので、下記に示したソースコードを入力してください。</p>
+<pre><code class="language-c">#include &lt;wiringPi.h&gt; //GPIOを扱うためのライブラリ
+#include &lt;stdio.h&gt; //printf関数を使うためのライブラリ
+#define LED_PORT 8 //GPIOに対応するポート番号
+#define LED_ON 1	//LEDがオン
+#define LED_OFF 0	//LEDがオフ
+
+//プログラムはmain関数から始まります
+int main() {
+	//loopnはループの終了条件、stopはLEDの点滅間隔
+	int loopn, stop;
+	//配線の初期化
+	wiringPiSetup();
+	// ピン番号の指定
+	pinMode(LED_PORT, OUTPUT);
+	//printf文は標準出力へ出力する
+	//ループの回数を聞いている
+	printf(&quot;How many times?&quot;);
+	//scanfは変数にキーボードから入力した値を代入する関数
+	//ループの回数を入力して代入している
+	scanf(&quot;%d&quot;, &amp;loopn);
+	//どれくらいの間隔か聞いている
+	printf(&quot;How long sleep?&quot;);
+	scanf(&quot;%d&quot;, &amp; stop);
+	//iはループ用の変数
+	//loopnを満たさない回数つまり0&lt;loopn回繰り返す
+	//i++でループのたびにカウンタを増やしている
+	for (int i = 0; i &lt; loopn; i++) {
+    	//LEDを光らせる
+    	digitalWrite(LED_PORT, LED_ON);
+    	//delay関数で間隔を指定する
+    	delay(stop);
+    	//0でLEDを消す
+    	digitalWrite(LED_PORT, LED_OFF);
+    	delay(stop);
+  	}
+	return 0;
+}
+</code></pre>
+<p>そして、入力して実行する際にはターミナル上で、以下のコマンドを入力してください。</p>
+<pre><code class="language-shell">make
+</code></pre>
+<p>makeはMakefileに書かれた内容を実行するという意味です。</p>
+<pre><code class="language-shell">gcc main.c -lwiringPi
+./a.out
+</code></pre>
+<h1 id="おわりに-1"><a class="header" href="#おわりに-1">おわりに</a></h1>
+<p>ラズパイと言ったらLチカですよね。一度Lチカをするといろいろなことに手を出したくなりますよね<br>
+電子情報工学科では、このような電子工作をしています。<br>
+興味がわいたらJ科の<a href="https://syllabus.kosen-k.go.jp/Pages/PublicSubjects?school_id=13&amp;department_id=13&amp;year=2021&amp;lang=ja">シラバス</a>を見るといいです。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="github-profile-の勧め"><a class="header" href="#github-profile-の勧め">GitHub Profile の勧め</a></h1>
 <h2 id="目次"><a class="header" href="#目次">目次</a></h2>
 <ul>
@@ -288,7 +445,7 @@ Obsidianは非常に便利な編集アプリですので是非使ってみてく
 最近はだらだら気の向くままに開発してることがおおいです。</p>
 <p>Twitter: <a href="https://twitter.com/namacha_411">https://twitter.com/namacha_411</a></p>
 <p>GitHub: <a href="https://github.com/Namacha411">https://github.com/Namacha411</a></p>
-<h2 id="はじめに-1"><a class="header" href="#はじめに-1">はじめに</a></h2>
+<h2 id="はじめに-2"><a class="header" href="#はじめに-2">はじめに</a></h2>
 <p>ほかのGitHubユーザのキラキラしたプロフィールを見て、
 自分でもやってみたのでその時に調べたものをまとめます。
 作ってみて楽しかったので皆さんも自分好みのプロフィールを作ってみてはどうでしょうか。</p>
