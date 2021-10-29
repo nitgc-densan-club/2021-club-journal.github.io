@@ -10,5 +10,7 @@
 			* [ラズパイでLチカ!!](./contents/kokasai/23rd/312k/LED.md)
 		* [namacha]()
 			* [GitHubProfileの勧め](./contents/kokasai/23rd/namacha/GitHubProfile.md)
+		* [tt6mzn]()
+			* [Minecraftで学ぶ論理回路](./contents/kokasai/23rd/tt6mzn/Redstone.md)
 * [IT勉強会]()
 	* [IT勉強会6th](./contents/session/6th/link.md)
