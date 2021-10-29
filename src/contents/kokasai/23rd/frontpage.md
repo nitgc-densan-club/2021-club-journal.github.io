@@ -1,6 +1,7 @@
 # 執筆者
 - [312k](https://twitter.com/312k3)
 - [namacha](https://twitter.com/namacha_411)
+- [tt6mzn](https://twitter.com/coffee_mu_)
 
 # 第23回工華祭へのリンク集
 - [群馬工業高等専門学校公式サイト](http://www.gunma-ct.ac.jp/)
