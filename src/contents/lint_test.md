@@ -1,4 +1,4 @@
 this is lint test markdown
 
-## test
-ああああああ
+## dot use h1
+ひほんごてすと
