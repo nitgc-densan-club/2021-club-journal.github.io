@@ -12,5 +12,7 @@
 			* [GitHubProfileの勧め](./contents/kokasai/23rd/namacha/GitHubProfile.md)
 		* [tt6mzn]()
 			* [Minecraftで学ぶ論理回路](./contents/kokasai/23rd/tt6mzn/Redstone.md)
+		* [tomoking2004]()
+			* [pythonでゲーム作ってみた](./contents/kokasai/23rd/tomoking2004/article.md)
 * [IT勉強会]()
 	* [IT勉強会6th](./contents/session/6th/link.md)

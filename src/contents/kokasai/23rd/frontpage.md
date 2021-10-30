@@ -3,6 +3,7 @@
 - [312k](https://twitter.com/312k3)
 - [namacha](https://twitter.com/namacha_411)
 - [tt6mzn](https://twitter.com/coffee_mu_)
+- [tomoking2004](https://github.com/tomoking2004)
 
 # 第23回工華祭へのリンク集
 
